@@ -1,0 +1,36 @@
+@import "./styles/colors";
+@import "./styles/fonts";
+@import "./styles/shadows";
+@import "./styles/normalize";
+@import "./components/components";
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+b,
+strong,
+i {
+    margin: 0;
+}
+
+.App {
+    background-color: $eerieBlack;
+    height: 100%;
+    display: flex;
+}

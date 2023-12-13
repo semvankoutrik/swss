@@ -1,0 +1,57 @@
+.Inbox {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    overflow: auto;
+
+    &__Messages {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: auto;
+    }
+
+    &__Message {
+        background-color: rgba(white, 0.05);
+        border-radius: 0 1rem 1rem 1rem;
+        padding: .75rem;
+        margin-bottom: 1rem;
+
+        &Header {
+            color: white;
+            margin-bottom: .5rem;
+            display: flex;
+        }
+
+        &Text {
+            color: white;
+            font-size: .9rem;
+        }
+    }
+
+    &__ChannelName {
+        color: $robinEggBlue;
+        font-weight: bold;
+    }
+
+    &__ChannelId {
+        color: rgba(white, 15%);
+        margin-left: 1rem;
+    }
+
+    &__Send {
+        padding: 1rem;
+        border-top: 1px solid rgba(white, 0.1);
+        width: 100%;
+        background-color: $eerieBlack;
+    }
+
+    &__SendingInNameOf {
+        color: rgba(white, 0.4);
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: .75rem;
+    }
+}

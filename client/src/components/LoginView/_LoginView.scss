@@ -1,0 +1,20 @@
+.LoginView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &__Form {
+        width: 20rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__Input {
+        flex: 1;
+    }
+}

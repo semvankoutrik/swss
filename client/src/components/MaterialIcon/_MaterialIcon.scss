@@ -1,0 +1,23 @@
+.material-icon {
+    font-size: 1.5rem;
+
+    &--regular {
+        font-family: $materialIcons;
+    }
+
+    &--outlined {
+        font-family: $materialIconsOutlined;
+    }
+
+    &--round {
+        font-family: $materialIconsRound;
+    }
+
+    &--sharp {
+        font-family: $materialIconsSharp;
+    }
+
+    &--two-tone {
+        font-family: $materialIconsTwoTone;
+    }
+}

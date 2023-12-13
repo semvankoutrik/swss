@@ -1,0 +1,82 @@
+$borderColor: lighten($eerieBlack, 15%);
+$textColor: white;
+$errorColor: #ED254E;
+$labelColor: $robinEggBlue;
+$labelColor--blur: lighten($eerieBlack, 40%);
+$backgroundColor: lighten($eerieBlack, 15%);
+
+.FilledInput {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    box-sizing: content-box;
+
+    &__Container {
+        flex: 1;
+    }
+
+    &__Input {
+        flex: 1;
+        border-radius: .25rem 0 0 .25rem;
+        padding: 1.75rem 1.25rem .75rem 1rem;
+        border: 1px solid $borderColor;
+        position: relative;
+        color: $textColor;
+        background-color: $backgroundColor;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--error &__Input {
+        border-bottom-color: $errorColor;
+    }
+
+    &__error {
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+        color: $errorColor;
+        font-size: .75rem;
+        font-weight: bold;
+    }
+
+    &__Label {
+        position: absolute;
+        transform: translateY(-.5rem);
+        font-weight: 400;
+        font-size: .75rem;
+        color: $labelColor;
+        top: 0;
+        left: 0;
+        padding: 1.25rem 1.25rem 1.25rem 1rem;
+        transition: transform 300ms ease, font-size 300ms ease, color 300ms ease;
+        pointer-events: none;
+    }
+
+    &--error &__Label {
+        color: $errorColor;
+    }
+
+    &__Input--empty:not(:focus)~&__Label {
+        transform: translateY(0);
+        color: $labelColor--blur;
+        font-size: 1rem;
+    }
+
+    &__Button {
+        background-color: $robinEggBlue;
+        color: white;
+        border: none;
+        border-radius: 0 .25rem .25rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        &:hover {
+            box-shadow: $elevation-2dp;
+            cursor: pointer;
+        }
+    }
+}
